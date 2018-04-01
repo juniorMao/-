@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-//@class SCPressView;
+@class SCPressView;
 
-//@protocol SCPressViewDelegate <NSObject>
+@protocol SCPressViewDelegate <NSObject>
 
-//-(void)pressViewDidClick:(SCPressView *)SCPressView;
+-(void)pressViewDidClick:(SCPressView *)pressView;
 
-//@end
+@end
 
 @interface SCPressView : UIView
-//@property (nonatomic, weak) id<SCPressViewDelegate> delegate;
+@property (nonatomic, strong) UIColor* bgcolor;
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) id <SCPressViewDelegate> delegate;
+-(instancetype)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)color;
 @end
